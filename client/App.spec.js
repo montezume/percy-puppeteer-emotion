@@ -7,9 +7,11 @@ describe("App - testing percy with emotion", () => {
 
   it("Default", async () => {
     await expect(page).toMatch("Lorem ipsum");
+    await page.screenshot({ path: "screenshot.jpg" });
     await percy.percySnapshot(
       page,
-      "percy-snapshot-test - testing percy with emotion"
+      "percy-snapshot-test - testing percy with emotion",
+      { widths: [1024] }
     );
   });
 });
