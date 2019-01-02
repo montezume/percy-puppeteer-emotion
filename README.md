@@ -4,6 +4,8 @@ I made this repository to show a bug I have found using the @percy/puppeteer SDK
 
 ![Screenshot of webpack production build taken by puppeteer](https://github.com/montezume/percy-puppeteer-emotion/blob/master/screenshot.jpg)
 
+(Screenshot of webpack production build taken by puppeteer)
+
 ### The app
 
 - Very basic React app.
@@ -11,6 +13,18 @@ I made this repository to show a bug I have found using the @percy/puppeteer SDK
 - One component (App.js)
 - One test (App.spec.js) that takes one percy snapshot
 - Uses jest-puppeteer and puppeteer
+
+### To run the App
+
+```bash
+# set your percy token (export PERCY_TOKEN=abc)
+# install deps
+yarn
+# build app in production mode
+yarn build
+# serve node server
+yarn serve
+```
 
 ### To recreate the bug
 
@@ -29,6 +43,8 @@ Will result in percy snapshot looking like:
 
 ![Screenshot of webpack production build taken by puppeteer](https://github.com/montezume/percy-puppeteer-emotion/blob/master/percy-with-webpack-production.jpg)
 
+(Screenshot of webpack production build taken by percy)
+
 ### Bug fix (by using mode "development" in webpack)
 
 ```bash
@@ -41,3 +57,5 @@ Results in percy output like this
 Will result in percy snapshot looking like:
 
 ![Screenshot of webpack production build taken by puppeteer](https://github.com/montezume/percy-puppeteer-emotion/blob/master/percy-with-webpack-development.jpg)
+
+(Screenshot of webpack development build taken by percy)
