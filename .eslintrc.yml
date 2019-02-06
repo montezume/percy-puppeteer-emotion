@@ -1,0 +1,15 @@
+extends:
+  - "airbnb-base"
+  - "eslint:recommended"
+  - "plugin:jest/recommended"
+  - "plugin:react/recommended"
+  - "prettier"
+  - "prettier/react"
+settings:
+  react:
+    pragma: React
+    version: detect
+rules:
+  "prefer-destructuring": 0
+  "react/jsx-filename-extension": 0
+  "react/destructuring-assignment": 0
