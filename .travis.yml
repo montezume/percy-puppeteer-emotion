@@ -13,6 +13,6 @@ cache:
 
 script:
   - set -e
-  - yarn build:production
+  - yarn build:development
   - yarn percy
   - set +e
