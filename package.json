@@ -26,6 +26,7 @@
     "@percy/puppeteer": "1.0.3",
     "babel-jest": "24.1.0",
     "babel-loader": "8.0.5",
+    "babel-plugin-emotion": "^10.0.7",
     "clean-webpack-plugin": "1.0.1",
     "eslint": "5.13.0",
     "eslint-config-airbnb": "17.1.0",

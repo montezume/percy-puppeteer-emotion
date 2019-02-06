@@ -6,7 +6,7 @@ const Block = styled.section`
   width: 80%;
   padding: 16px;
   margin: 32px;
-  background: white;
+  background: gray;
   display: flex;
   align-items: center;
   justify-content: center;
