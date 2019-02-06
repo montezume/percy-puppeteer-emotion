@@ -9,6 +9,14 @@ settings:
   react:
     pragma: React
     version: detect
+overrides:
+  - files: ["*.spec.js"]
+    rules:
+      "react/display-name": 0
+  - files: ["*.spec.js"]
+    globals:
+      page: true
+      HOST: true
 rules:
   "prefer-destructuring": 0
   "react/jsx-filename-extension": 0

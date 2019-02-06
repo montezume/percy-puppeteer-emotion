@@ -6,7 +6,7 @@ describe("App - testing percy with emotion", () => {
   });
 
   it("Default", async () => {
-    await expect(page).toMatch("Lorem ipsum");
+    await expect(page).toMatch("Block 1");
     await page.screenshot({ path: "screenshot.jpg" });
     await percy.percySnapshot(
       page,
