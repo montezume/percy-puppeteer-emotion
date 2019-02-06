@@ -45,8 +45,6 @@ Will result in percy snapshot looking like:
 
 (Screenshot of webpack production build taken by percy)
 
-##todo
-
 ### Bug fix (by using mode "development" in webpack)
 
 ```bash
