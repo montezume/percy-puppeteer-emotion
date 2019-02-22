@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "yarn build:production",
+    "build": "yarn build:development",
     "build:watch": "yarn build:development --watch",
     "build:production": "NODE_ENV=production webpack",
     "build:development": "NODE_ENV=development webpack",
