@@ -15,6 +15,8 @@ describe('App - testing percy with emotion', () => {
       await page.click('#select-input');
       await expect(page).toMatch('Coconut buns');
       await percy.percySnapshot(page, 'Dim sum app - select open');
+      await page.click('#react-select-2-option-0');
+      await percy.percySnapshot(page, 'Dim sum app - after select');
     });
   });
 });
