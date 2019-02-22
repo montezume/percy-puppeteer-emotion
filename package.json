@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "yarn build:production",
+    "build:watch": "yarn build:development --watch",
     "build:production": "NODE_ENV=production webpack",
     "build:development": "NODE_ENV=development webpack",
     "serve": "serve dist --no-clipboard --single --listen 3001",
@@ -17,12 +18,14 @@
     "@emotion/core": "10.0.7",
     "@emotion/styled": "10.0.7",
     "react": "16.8.2",
-    "react-dom": "16.8.2"
+    "react-dom": "16.8.2",
+    "react-select": "^2.4.1"
   },
   "devDependencies": {
     "@babel/core": "7.3.3",
     "@babel/preset-env": "7.3.1",
     "@babel/preset-react": "7.0.0",
+    "@emotion/babel-preset-css-prop": "^10.0.7",
     "@percy/puppeteer": "1.0.5",
     "babel-jest": "24.1.0",
     "babel-loader": "8.0.5",
@@ -41,6 +44,7 @@
     "prettier": "1.16.4",
     "puppeteer": "1.12.2",
     "serve": "10.1.2",
+    "url-loader": "^1.1.2",
     "webpack": "4.29.5",
     "webpack-cli": "3.2.3"
   }

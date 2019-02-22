@@ -1,41 +1,93 @@
-import React from "react";
-import styled from "@emotion/styled";
+import React from 'react';
+import styled from '@emotion/styled';
+import { Global, css } from '@emotion/core';
+import Heading from './components/heading';
+import Subheading from './components/subheading';
+import DimSumImage from './assets/images/dim-sum.jpg';
+import Select from './components/select';
+import reset from './reset';
+import vars from './theme';
 
-const Block = styled.section`
-  min-height: 300px;
-  width: 80%;
-  padding: 16px;
-  margin: 32px;
-  background: gray;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+const Wrapper = styled.div`
+  max-width: 1000px;
+  margin: 0 auto;
 `;
 
-const Wrapper = styled.section`
-  width: 100%;
-  height: 100vh;
-  background: pink;
+const Grid = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
+  padding: 16px;
+  @media only screen and (min-width: 767px) {
+    flex-direction: row;
+    padding: 32px;
+  }
 `;
 
-const P = styled.p`
-  color: black;
-  font-size: 2em;
+const Column = styled.div`
+  width: 100%;
+  @media only screen and (min-width: 767px) {
+    width: 50%;
+  }
 `;
 
 const App = () => (
-  <Wrapper>
-    <Block>
-      <P>Block 1</P>
-    </Block>
-    <Block>
-      <P>Block 2</P>
-    </Block>
-  </Wrapper>
+  <React.Fragment>
+    <Global styles={reset()} />
+    <Wrapper>
+      <Heading>Dim sum</Heading>
+      <Grid>
+        <Column>
+          <p
+            css={css`
+              margin-top: 0;
+            `}
+          >
+            <span
+              css={css`
+                color: ${vars.brand};
+              `}
+            >
+              Dim sum
+            </span>
+            {` `}literally translates to “touch” and “heart”, or can be
+            translated simply as “heart’s delight”.
+          </p>
+          <p
+            css={css`
+              margin-bottom: 0;
+            `}
+          >
+            It is a style of Chinese cuisine (particularly Cantonese but also
+            other varieties) prepared as small bite-sized portions of food
+            served in small steamer baskets or on small plate.
+          </p>
+        </Column>
+        <Column>
+          <div
+            css={css`
+              padding-top: 16px;
+              @media (min-width: 786px) {
+                padding-top: 0;
+                padding-left: 32px;
+              }
+            `}
+          >
+            <img
+              css={css`
+                max-width: 100%;
+              `}
+              src={DimSumImage}
+              alt="delicious dim sum"
+            />
+          </div>
+        </Column>
+      </Grid>
+      <Subheading>Select your favorite dim sum dishes</Subheading>
+      <div>
+        <Select />
+      </div>
+    </Wrapper>
+  </React.Fragment>
 );
 
 export default App;
