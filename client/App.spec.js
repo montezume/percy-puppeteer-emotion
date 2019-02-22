@@ -6,11 +6,7 @@ describe('App - testing percy with emotion', () => {
   });
 
   it('Default', async () => {
-    await expect(page).toMatch('Block 1');
-    await percy.percySnapshot(
-      page,
-      'percy-snapshot-test - testing percy with emotion',
-      { widths: [1024] }
-    );
+    await expect(page).toMatch('Dim sum');
+    await percy.percySnapshot(page, 'Dim sum, main page');
   });
 });
