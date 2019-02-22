@@ -7,6 +7,14 @@ describe('App - testing percy with emotion', () => {
 
   it('Default', async () => {
     await expect(page).toMatch('Dim sum');
-    await percy.percySnapshot(page, 'Dim sum, main page');
+    await percy.percySnapshot(page, 'Dim sum app');
+  });
+
+  describe('when selecting dim sum', () => {
+    it('Opening select box', async () => {
+      await page.click('#select-input');
+      await expect(page).toMatch('Coconut buns');
+      await percy.percySnapshot(page, 'Dim sum app - select open');
+    });
   });
 });

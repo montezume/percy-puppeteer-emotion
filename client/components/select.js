@@ -10,6 +10,7 @@ const options = [
 
 const SelectComponent = props => (
   <Select
+    id="select-input"
     value={props.value}
     defaultValue={options[0]}
     options={options}
