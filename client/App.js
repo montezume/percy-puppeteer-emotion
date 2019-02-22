@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import { Global, css } from '@emotion/core';
 import Heading from './components/heading';
 import Subheading from './components/subheading';
+import FavouriteDimsum from './components/favourite-dim-sum';
 import DimSumImage from './assets/images/dim-sum.jpg';
 import Select from './components/select';
 import reset from './reset';
@@ -83,9 +84,7 @@ const App = () => (
         </Column>
       </Grid>
       <Subheading>Select your favorite dim sum dishes</Subheading>
-      <div>
-        <Select />
-      </div>
+      <FavouriteDimsum />
     </Wrapper>
   </React.Fragment>
 );

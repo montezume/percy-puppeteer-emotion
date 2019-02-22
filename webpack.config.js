@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
-  mode: process.env.NODE_ENV,
+  mode: 'development',
   entry: './client/index.js',
   output: {
     filename: 'main.js',
