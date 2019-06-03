@@ -15,7 +15,7 @@ const SelectComponent = props => (
     id="select-input"
     value={props.value}
     defaultValue={options[0]}
-    options={options}
+    searchable={true}
     onChange={props.onChange}
     loadOptions={loadOptions}
   />

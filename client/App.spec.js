@@ -14,6 +14,7 @@ describe('App - testing percy with emotion', () => {
     it('Opening select box', async () => {
       await page.click('#select-input');
       await expect(page).toMatch('Coconut buns');
+      await page.type('#select-input', 'C');
       await percy.percySnapshot(page, 'Dim sum app - select open');
       await page.click('#react-select-2-option-0');
       await percy.percySnapshot(page, 'Dim sum app - after select');
