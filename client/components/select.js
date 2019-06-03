@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Select from 'react-select';
+import AsyncSelect from 'react-select/async';
 
 const options = [
   { value: 'hargow', label: 'Crystal shrimp dumplings (har gow)' },
@@ -8,13 +8,16 @@ const options = [
   { value: 'fengzhua', label: 'Chicken feet (feng zhua)' },
 ];
 
+const loadOptions = () => Promise.resolve(options);
+
 const SelectComponent = props => (
-  <Select
+  <AsyncSelect
     id="select-input"
     value={props.value}
     defaultValue={options[0]}
     options={options}
     onChange={props.onChange}
+    loadOptions={loadOptions}
   />
 );
 
