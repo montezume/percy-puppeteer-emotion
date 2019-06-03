@@ -13,6 +13,7 @@ describe('App - testing percy with emotion', () => {
   describe('when selecting dim sum', () => {
     it('Opening select box', async () => {
       await page.click('#select-input');
+      await page.type('#select-input', ' ');
       await expect(page).toMatch('Coconut buns');
       await percy.percySnapshot(page, 'Dim sum app - select open');
       await page.click('#react-select-2-option-0');

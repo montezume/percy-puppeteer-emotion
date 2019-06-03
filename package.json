@@ -9,6 +9,7 @@
     "build:production": "NODE_ENV=production webpack",
     "build:development": "NODE_ENV=development webpack",
     "serve": "serve dist --no-clipboard --single --listen 3001",
+    "start": "yarn serve",
     "test": "jest --config jest.config.js",
     "percy": "percy exec -- yarn test"
   },

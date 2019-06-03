@@ -1,6 +1,6 @@
 module.exports = {
   server: {
-    command: "yarn serve",
-    port: 3001
-  }
+    command: 'yarn serve',
+    port: 3001,
+  },
 };
