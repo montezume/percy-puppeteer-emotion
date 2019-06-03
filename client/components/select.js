@@ -16,6 +16,7 @@ const SelectComponent = props => (
     value={props.value}
     defaultValue={options[0]}
     searchable={true}
+    defaultOptions={false}
     onChange={props.onChange}
     loadOptions={loadOptions}
   />
